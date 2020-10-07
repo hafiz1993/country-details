@@ -18,7 +18,7 @@ const useStyles = makeStyles({
 
 const CountryCard = (props) => {
     const classes = useStyles();
-    const { name, flag, region, topLevelDomain, alpha2Code} = props.country;
+    const { name, flag, alpha2Code} = props.country;
     // console.log(name);
     return (
         <Card className={classes.root} style={{ margin: "10px" }} >
@@ -33,7 +33,7 @@ const CountryCard = (props) => {
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                        <h4><Link to ={`/details/${name}`} style={{textDecoration:"none"}}>{name}</Link></h4>
+                        <h4><Link to ={`/details/${name}`} style={{textDecoration:"none", textColor:"black"}}>{name}</Link></h4>
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
                         {alpha2Code} 
@@ -42,7 +42,7 @@ const CountryCard = (props) => {
                 </CardContent>
             </CardActionArea>
             <CardActions>
-             <Link to ={"/details/"+name}> 
+             <Link to ={"/details/"+alpha2Code}> 
                 <Button size="small" color="primary">
                     Learn More
                     </Button>

@@ -160,7 +160,7 @@ const Header = () => {
   );
     return (
         <div className={classes.grow}>
-        <AppBar position="static" style={{backgroundColor: '#25A3E1'}}>
+        <AppBar position="static" style={{backgroundColor: '#25A3E1',}}>
             {/* where can appbar color change */}
           <Toolbar>
             <IconButton
