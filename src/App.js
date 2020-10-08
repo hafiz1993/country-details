@@ -14,8 +14,8 @@ import NoMatch from './Components/NoMatch/NoMatch';
 
 function App() {
   return (
-    <Container>
-    <div>
+
+   <div>
     <Router>
     <Header></Header>
       <Switch>
@@ -34,7 +34,7 @@ function App() {
       </Switch>
       </Router>
       </div>
-      </Container>
+      
   );
 }
 

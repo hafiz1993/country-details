@@ -18,31 +18,29 @@ const useStyles = makeStyles({
 
 const CountryCard = (props) => {
     const classes = useStyles();
-    const { name, flag, alpha2Code} = props.country;
+    const { name, flag, alpha2Code, capital} = props.country;
     // console.log(name);
     return (
-        <Card className={classes.root} style={{ margin: "10px" }} >
-            <CardActionArea style={{ width: "20rem" }}>
+        <Card className={classes.root} style={{margin:"10px"}} >
+            <CardActionArea style={{ width: "19rem" }}>
                 <CardMedia
                     component="img"
                     alt="Contemplative Reptile"
-                    height="140"
-                    width="300"
+                    height="200px"
+                   
                     image={flag}
                     title={name}
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                        <h4><Link to ={`/details/${name}`} style={{textDecoration:"none", textColor:"black"}}>{name}</Link></h4>
+                        <h4><Link to ={`/details/${name}`} style={{textDecoration:"none"}}>{name}</Link></h4>
                     </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                        {alpha2Code} 
-                    </Typography>
+                    
                    
                 </CardContent>
             </CardActionArea>
             <CardActions>
-             <Link to ={"/details/"+alpha2Code}> 
+             <Link to ={"/details/"+ name}> 
                 <Button size="small" color="primary">
                     Learn More
                     </Button>
